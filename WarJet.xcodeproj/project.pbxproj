@@ -8,26 +8,38 @@
 
 /* Begin PBXBuildFile section */
 		DC1F3BFC245AEB1A00E993F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1F3BFB245AEB1A00E993F2 /* AppDelegate.swift */; };
-		DC1F3BFE245AEB1A00E993F2 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = DC1F3BFD245AEB1A00E993F2 /* GameScene.sks */; };
-		DC1F3C00245AEB1A00E993F2 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = DC1F3BFF245AEB1A00E993F2 /* Actions.sks */; };
 		DC1F3C02245AEB1A00E993F2 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1F3C01245AEB1A00E993F2 /* GameScene.swift */; };
 		DC1F3C04245AEB1A00E993F2 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1F3C03245AEB1A00E993F2 /* GameViewController.swift */; };
 		DC1F3C07245AEB1A00E993F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC1F3C05245AEB1A00E993F2 /* Main.storyboard */; };
 		DC1F3C09245AEB1B00E993F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC1F3C08245AEB1B00E993F2 /* Assets.xcassets */; };
 		DC1F3C0C245AEB1B00E993F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC1F3C0A245AEB1B00E993F2 /* LaunchScreen.storyboard */; };
+		DC7499F8246153FA006ABF73 /* GreenPowerUp.atlas in Resources */ = {isa = PBXBuildFile; fileRef = DC7499F7246153FA006ABF73 /* GreenPowerUp.atlas */; };
+		DC9873B8245B3CC100748D74 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9873B7245B3CC100748D74 /* Background.swift */; };
+		DC9873BA245B419700748D74 /* Island.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9873B9245B419700748D74 /* Island.swift */; };
+		DC9873BC245B54E900748D74 /* Cloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9873BB245B54E900748D74 /* Cloud.swift */; };
+		DC9873BE245B626E00748D74 /* PlayerPlane.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9873BD245B626E00748D74 /* PlayerPlane.swift */; };
+		DC9873C0245B641400748D74 /* WarJetImg.atlas in Resources */ = {isa = PBXBuildFile; fileRef = DC9873BF245B641400748D74 /* WarJetImg.atlas */; };
+		DCA2928624609D9600207116 /* PowerUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA2928524609D9600207116 /* PowerUp.swift */; };
+		DCCCD364245C3B7D00A67EE0 /* protocol GameBackgroundSpriteable + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCCD363245C3B7D00A67EE0 /* protocol GameBackgroundSpriteable + Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DC1F3BF8245AEB1A00E993F2 /* WarJet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WarJet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC1F3BFB245AEB1A00E993F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DC1F3BFD245AEB1A00E993F2 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		DC1F3BFF245AEB1A00E993F2 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		DC1F3C01245AEB1A00E993F2 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		DC1F3C03245AEB1A00E993F2 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		DC1F3C06245AEB1A00E993F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DC1F3C08245AEB1B00E993F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC1F3C0B245AEB1B00E993F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC1F3C0D245AEB1B00E993F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC7499F7246153FA006ABF73 /* GreenPowerUp.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = GreenPowerUp.atlas; sourceTree = "<group>"; };
+		DC9873B7245B3CC100748D74 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
+		DC9873B9245B419700748D74 /* Island.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Island.swift; sourceTree = "<group>"; };
+		DC9873BB245B54E900748D74 /* Cloud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cloud.swift; sourceTree = "<group>"; };
+		DC9873BD245B626E00748D74 /* PlayerPlane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerPlane.swift; sourceTree = "<group>"; };
+		DC9873BF245B641400748D74 /* WarJetImg.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = WarJetImg.atlas; sourceTree = "<group>"; };
+		DCA2928524609D9600207116 /* PowerUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerUp.swift; sourceTree = "<group>"; };
+		DCCCD363245C3B7D00A67EE0 /* protocol GameBackgroundSpriteable + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "protocol GameBackgroundSpriteable + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,14 +73,20 @@
 			isa = PBXGroup;
 			children = (
 				DC1F3BFB245AEB1A00E993F2 /* AppDelegate.swift */,
-				DC1F3BFD245AEB1A00E993F2 /* GameScene.sks */,
-				DC1F3BFF245AEB1A00E993F2 /* Actions.sks */,
 				DC1F3C01245AEB1A00E993F2 /* GameScene.swift */,
+				DC9873B9245B419700748D74 /* Island.swift */,
+				DC9873BB245B54E900748D74 /* Cloud.swift */,
+				DCCCD363245C3B7D00A67EE0 /* protocol GameBackgroundSpriteable + Extension.swift */,
+				DC9873BD245B626E00748D74 /* PlayerPlane.swift */,
+				DCA2928524609D9600207116 /* PowerUp.swift */,
+				DC9873B7245B3CC100748D74 /* Background.swift */,
 				DC1F3C03245AEB1A00E993F2 /* GameViewController.swift */,
 				DC1F3C05245AEB1A00E993F2 /* Main.storyboard */,
 				DC1F3C08245AEB1B00E993F2 /* Assets.xcassets */,
 				DC1F3C0A245AEB1B00E993F2 /* LaunchScreen.storyboard */,
 				DC1F3C0D245AEB1B00E993F2 /* Info.plist */,
+				DC7499F7246153FA006ABF73 /* GreenPowerUp.atlas */,
+				DC9873BF245B641400748D74 /* WarJetImg.atlas */,
 			);
 			path = WarJet;
 			sourceTree = "<group>";
@@ -131,11 +149,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC9873C0245B641400748D74 /* WarJetImg.atlas in Resources */,
+				DC7499F8246153FA006ABF73 /* GreenPowerUp.atlas in Resources */,
 				DC1F3C07245AEB1A00E993F2 /* Main.storyboard in Resources */,
-				DC1F3BFE245AEB1A00E993F2 /* GameScene.sks in Resources */,
 				DC1F3C09245AEB1B00E993F2 /* Assets.xcassets in Resources */,
 				DC1F3C0C245AEB1B00E993F2 /* LaunchScreen.storyboard in Resources */,
-				DC1F3C00245AEB1A00E993F2 /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,8 +165,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC1F3C02245AEB1A00E993F2 /* GameScene.swift in Sources */,
+				DC9873BE245B626E00748D74 /* PlayerPlane.swift in Sources */,
+				DC9873BC245B54E900748D74 /* Cloud.swift in Sources */,
 				DC1F3C04245AEB1A00E993F2 /* GameViewController.swift in Sources */,
 				DC1F3BFC245AEB1A00E993F2 /* AppDelegate.swift in Sources */,
+				DCCCD364245C3B7D00A67EE0 /* protocol GameBackgroundSpriteable + Extension.swift in Sources */,
+				DC9873B8245B3CC100748D74 /* Background.swift in Sources */,
+				DCA2928624609D9600207116 /* PowerUp.swift in Sources */,
+				DC9873BA245B419700748D74 /* Island.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,7 +326,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = fairmentat.WarJet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -320,7 +344,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = fairmentat.WarJet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

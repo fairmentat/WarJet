@@ -13,7 +13,7 @@
 		DC1F3C07245AEB1A00E993F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC1F3C05245AEB1A00E993F2 /* Main.storyboard */; };
 		DC1F3C09245AEB1B00E993F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC1F3C08245AEB1B00E993F2 /* Assets.xcassets */; };
 		DC1F3C0C245AEB1B00E993F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC1F3C0A245AEB1B00E993F2 /* LaunchScreen.storyboard */; };
-		DC7499F8246153FA006ABF73 /* GreenPowerUp.atlas in Resources */ = {isa = PBXBuildFile; fileRef = DC7499F7246153FA006ABF73 /* GreenPowerUp.atlas */; };
+		DC6C47B824615CF700E91E87 /* GreenPowerUp.atlas in Resources */ = {isa = PBXBuildFile; fileRef = DC6C47B724615CF700E91E87 /* GreenPowerUp.atlas */; };
 		DC9873B8245B3CC100748D74 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9873B7245B3CC100748D74 /* Background.swift */; };
 		DC9873BA245B419700748D74 /* Island.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9873B9245B419700748D74 /* Island.swift */; };
 		DC9873BC245B54E900748D74 /* Cloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9873BB245B54E900748D74 /* Cloud.swift */; };
@@ -32,7 +32,7 @@
 		DC1F3C08245AEB1B00E993F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC1F3C0B245AEB1B00E993F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC1F3C0D245AEB1B00E993F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DC7499F7246153FA006ABF73 /* GreenPowerUp.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = GreenPowerUp.atlas; sourceTree = "<group>"; };
+		DC6C47B724615CF700E91E87 /* GreenPowerUp.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = GreenPowerUp.atlas; sourceTree = "<group>"; };
 		DC9873B7245B3CC100748D74 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
 		DC9873B9245B419700748D74 /* Island.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Island.swift; sourceTree = "<group>"; };
 		DC9873BB245B54E900748D74 /* Cloud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cloud.swift; sourceTree = "<group>"; };
@@ -85,7 +85,7 @@
 				DC1F3C08245AEB1B00E993F2 /* Assets.xcassets */,
 				DC1F3C0A245AEB1B00E993F2 /* LaunchScreen.storyboard */,
 				DC1F3C0D245AEB1B00E993F2 /* Info.plist */,
-				DC7499F7246153FA006ABF73 /* GreenPowerUp.atlas */,
+				DC6C47B724615CF700E91E87 /* GreenPowerUp.atlas */,
 				DC9873BF245B641400748D74 /* WarJetImg.atlas */,
 			);
 			path = WarJet;
@@ -150,7 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC9873C0245B641400748D74 /* WarJetImg.atlas in Resources */,
-				DC7499F8246153FA006ABF73 /* GreenPowerUp.atlas in Resources */,
+				DC6C47B824615CF700E91E87 /* GreenPowerUp.atlas in Resources */,
 				DC1F3C07245AEB1A00E993F2 /* Main.storyboard in Resources */,
 				DC1F3C09245AEB1B00E993F2 /* Assets.xcassets in Resources */,
 				DC1F3C0C245AEB1B00E993F2 /* LaunchScreen.storyboard in Resources */,

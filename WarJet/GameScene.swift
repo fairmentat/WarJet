@@ -21,7 +21,12 @@ class GameScene: SKScene {
        configureStartScene()
         spawnClouds()
         spawnIslands()
-        player.performFly()
+        let deadLine = DispatchTime.now() + .nanoseconds(1)
+        DispatchQueue.main.asyncAfter(deadline: deadLine) { [unowned self] in
+            
+            self.player.performFly()
+        }
+       
         
         let powerUp = PowerUp()
         powerUp.performRotation()

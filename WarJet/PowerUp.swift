@@ -6,6 +6,8 @@
 //  Copyright © 2020 BioRobot. All rights reserved.
 //
 
+// Класс для управления прокачкой (POWERUP)
+
 import SpriteKit
 import UIKit
 
@@ -27,7 +29,7 @@ class PowerUp: SKSpriteNode {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func performRotation() {
+    func performRotation() { // Метод для анимаци powerUp
         for i in 1...16 {
             
             let number = String(format: "%02d", i)

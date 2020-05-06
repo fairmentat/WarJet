@@ -24,7 +24,7 @@ final class Cloud: SKSpriteNode, GameBackGroundSpriteable {
         cloud.setScale(randomScaleFactor)
         cloud.position = point ?? randomPoint()
         cloud.zPosition = 10
-        cloud.name = "backgroundSprite"
+        cloud.name = "sprite"
         //cloud.run(rotateForRandomAngle())
         cloud.run(move(from: cloud.position))
         
@@ -32,7 +32,7 @@ final class Cloud: SKSpriteNode, GameBackGroundSpriteable {
         
     }
     
-   fileprivate static func configureName() -> String { //    функция для рандомного выбора облака по имени
+    fileprivate static func configureName() -> String { //    функция для рандомного выбора облака по имени
         let distribution = GKRandomDistribution(lowestValue: 1, highestValue: 3)
         let randomNumber = distribution.nextInt()
         let imageName = "cl" + "\(randomNumber)"
@@ -44,20 +44,20 @@ final class Cloud: SKSpriteNode, GameBackGroundSpriteable {
         let randomNumber = CGFloat(distribution.nextInt()) / 10
         return randomNumber
     }
-
-//    static func rotateForRandomAngle() -> SKAction { //    функция для рандомного поворота острова
-//        let distribution = GKRandomDistribution(lowestValue: 0, highestValue: 360)
-//              let randomNumber = CGFloat(distribution.nextInt())
-//        return SKAction.rotate(toAngle: randomNumber * CGFloat(Double.pi / 180), duration: 0) //    Перевод градусов в радианы
-//
-//    }
+    
+    //    static func rotateForRandomAngle() -> SKAction { //    функция для рандомного поворота острова
+    //        let distribution = GKRandomDistribution(lowestValue: 0, highestValue: 360)
+    //              let randomNumber = CGFloat(distribution.nextInt())
+    //        return SKAction.rotate(toAngle: randomNumber * CGFloat(Double.pi / 180), duration: 0) //    Перевод градусов в радианы
+    //
+    //    }
     
     fileprivate static func move(from point: CGPoint) -> SKAction { // Движение облаков
-           
-           let movepoint = CGPoint(x: point.x, y: -200)
-           let moveDistance = point.y + 200
-           let movementSpeed: CGFloat = 150.0
-           let duration = moveDistance / movementSpeed
-           return SKAction.move(to: movepoint, duration: TimeInterval(duration))
-       }
+        
+        let movepoint = CGPoint(x: point.x, y: -200)
+        let moveDistance = point.y + 200
+        let movementSpeed: CGFloat = 150.0
+        let duration = moveDistance / movementSpeed
+        return SKAction.move(to: movepoint, duration: TimeInterval(duration))
+    }
 }

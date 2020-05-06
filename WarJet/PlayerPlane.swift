@@ -30,7 +30,7 @@ class PlayerPlane: SKSpriteNode {
         let playerPlane = PlayerPlane(texture: playerPlaneTexture)
         playerPlane.setScale(0.2)
         playerPlane.position = point
-        playerPlane.zPosition = 20
+        playerPlane.zPosition = 40
         return playerPlane
     }
     

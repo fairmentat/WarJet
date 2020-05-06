@@ -11,29 +11,48 @@
 import SpriteKit
 import UIKit
 
-class PowerUp: SKSpriteNode {
+class PowerUp: SKSpriteNode { // Суперкласс для задания методов и свойств
     
-    let initialSize = CGSize(width: 52, height: 52)
-    let textureAtlas = SKTextureAtlas(named: "GreenPowerUp")
-    var animationSpriteArray = [SKTexture]()
+    fileprivate let initialSize = CGSize(width: 52, height: 52)
+    fileprivate let textureAtlas: SKTextureAtlas!
+    fileprivate var textureNameBeingWith = ""
+    fileprivate var animationSpriteArray = [SKTexture]()
     
-    init() {
-        let greenTexture = textureAtlas.textureNamed("Missile_01")
-        super.init(texture: greenTexture, color: .clear, size: initialSize)
-        self.name = "powerUp"
+    init(textureAtlas: SKTextureAtlas) {
+        //let greenTexture = textureAtlas.textureNamed("Missile_01")
+        self.textureAtlas = textureAtlas
+        let textureName = textureAtlas.textureNames.sorted()[0]
+        
+        let texture = textureAtlas.textureNamed(textureName)
+        textureNameBeingWith = String(textureName.dropLast(6))
+        
+        super.init(texture: texture, color: .clear, size: initialSize)
+        self.setScale(0.7)
+        self.name = "sprite"
         self.zPosition = 20
         
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    
+    func startMovement() {
+        performRotation()
+        
+        let moveForward = SKAction.moveTo(y: -100, duration: 5)
+        self.run(moveForward)
+        
+        
+        
+        
     }
     
-    func performRotation() { // Метод для анимаци powerUp
+    
+    
+    
+    fileprivate func performRotation() { // Метод для анимаци powerUp
         for i in 1...16 {
             
             let number = String(format: "%02d", i)
-            animationSpriteArray.append(SKTexture(imageNamed: "Missile_\(number)"))
+            animationSpriteArray.append(SKTexture(imageNamed: textureNameBeingWith + number.description))
         }
         SKTexture.preload(animationSpriteArray) {
             let rotation = SKAction.animate(with: self.animationSpriteArray, timePerFrame: 0.2, resize: true, restore: false)
@@ -43,6 +62,9 @@ class PowerUp: SKSpriteNode {
         
     }
     
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     
     

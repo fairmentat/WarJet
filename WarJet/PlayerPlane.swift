@@ -25,8 +25,8 @@ class PlayerPlane: SKSpriteNode {
     let animationSpriteStrides = [(13, 1, -1), (13, 26, 1), (13, 13, 1)] // переписвыаем в кортеж циклы из метода planeAnimationFillArray для последующего его удаления
     
     static func populate(at point: CGPoint) -> PlayerPlane { // Создание самолёта
-        
-        let playerPlaneTexture = SKTexture(imageNamed: "WarJet_13")
+        let atlas = Assets.shared.warJetImgAtlas
+        let playerPlaneTexture = atlas.textureNamed("WarJet_13") //SKTexture(imageNamed: "WarJet_13")
         let playerPlane = PlayerPlane(texture: playerPlaneTexture)
         playerPlane.setScale(0.2)
         playerPlane.position = point

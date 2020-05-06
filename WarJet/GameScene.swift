@@ -79,8 +79,8 @@ class GameScene: SKScene {
       
     }
     fileprivate func spawnSpiralOfEnemies() {
-        let enemyTextureAtlas1 = SKTextureAtlas(named: "Enemy")
-        let enemyTextureAtlas2 = SKTextureAtlas(named: "EnemyKU")
+        let enemyTextureAtlas1 = Assets.shared.enemyAtlas  //SKTextureAtlas(named: "Enemy")
+        let enemyTextureAtlas2 = Assets.shared.enemyKUAtlas    //SKTextureAtlas(named: "EnemyKU")
         SKTextureAtlas.preloadTextureAtlases([enemyTextureAtlas1, enemyTextureAtlas2]) { [unowned self] in
             //Enemy.textureAtlas = enemyTextureAtlas1
             let randomNumber = Int(arc4random_uniform(2))

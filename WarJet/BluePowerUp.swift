@@ -11,7 +11,7 @@ import SpriteKit
 
 class BluePowerUp: PowerUp { // Подкласс для зелёных паверапов
     init(){
-        let textureAtlas = SKTextureAtlas(named: "BluePowerUp")
+        let textureAtlas = Assets.shared.bluePowerUpAtlas  //SKTextureAtlas(named: "BluePowerUp")
         
         super.init(textureAtlas: textureAtlas)
         

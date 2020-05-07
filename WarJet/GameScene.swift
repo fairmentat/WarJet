@@ -10,13 +10,16 @@ import SpriteKit
 import GameplayKit
 
 
-class GameScene: SKScene {
+class GameScene: SKScene  {
     
     
     var player: PlayerPlane!
     
     
     override func didMove(to view: SKView) {
+        
+        physicsWorld.contactDelegate = self  // Протокол предоставляющий метод для регистрации столкновений
+        physicsWorld.gravity = CGVector.zero // Сила гравитации равна нулю
         
         configureStartScene()
         spawnClouds()
@@ -58,9 +61,9 @@ class GameScene: SKScene {
     }
     fileprivate func spawnPowerUp() { // Метод определяющий появление паверапов
         
-//        let powerUp = GreenPowerUp()
-//        powerUp.startMovement()
-//        powerUp.position = CGPoint(x: self.size.width / 2, y: self.size.height / 2)
+        //        let powerUp = GreenPowerUp()
+        //        powerUp.startMovement()
+        //        powerUp.position = CGPoint(x: self.size.width / 2, y: self.size.height / 2)
         
         let spawnAction = SKAction.run {
             let randomNumber = Int(arc4random_uniform(2))
@@ -69,14 +72,14 @@ class GameScene: SKScene {
             let randomPositionX = arc4random_uniform(UInt32(self.size.width - 30))
             powerUp.position = CGPoint(x: CGFloat(randomPositionX), y: self.size.height + 100)
             powerUp.startMovement()
-              self.addChild(powerUp)
+            self.addChild(powerUp)
         }
         let randomTimeSpawn = Double(arc4random_uniform(11) + 10)
         let waitAction = SKAction.wait(forDuration: randomTimeSpawn)
         self.run(SKAction.repeatForever(SKAction.sequence([spawnAction, waitAction])))
         
         
-      
+        
     }
     fileprivate func spawnSpiralOfEnemies() {
         let enemyTextureAtlas1 = Assets.shared.enemyAtlas  //SKTextureAtlas(named: "Enemy")
@@ -206,7 +209,7 @@ class GameScene: SKScene {
         shot.position = self.player.position
         shot.startMovement()
         self.addChild(shot)
-            
+        
         
         
         
@@ -216,9 +219,58 @@ class GameScene: SKScene {
         playerFire()
     }
     
+    
+    
+    
+    
+    
+    
+    
 }
-
-
+extension GameScene: SKPhysicsContactDelegate {
+    func didBegin(_ contact: SKPhysicsContact) { // Делаем столкновения с объектами более реалистичными
+        
+        
+        
+        
+        let contactCategory: BitMaskCategory = [contact.bodyA.category, contact.bodyB.category]
+        switch contactCategory {
+        case [.enemy, .player]: print("enemy vs player")
+        case [.powerUp, .player]: print("powerUp vs player")
+        case [.enemy, .shot]: print("enemy vs shot")
+            
+        default:
+            preconditionFailure("dead")
+        }
+        
+        
+        
+        
+        
+        /* Старый код, рабочий, но слишком объёмный
+         let bodyA = contact.bodyA.contactTestBitMask
+         let bodyB = contact.bodyB.contactTestBitMask
+         
+         let player = BitMaskCategory.player
+         let enemy = BitMaskCategory.enemy
+         let shot = BitMaskCategory.shot
+         let powerUp = BitMaskCategory.powerUp
+         
+         if bodyA == player && bodyB ==  enemy || bodyB == player && bodyA ==  enemy {
+         print("enemy vs player")
+         } else if bodyA == player && bodyB == powerUp || bodyB == player && bodyA == powerUp {
+         print("powerUp vs player")
+         } else if bodyA == shot && bodyB == enemy || bodyB == shot && bodyA == enemy {
+         print("enemy vs shot")
+         }*/
+        
+    }
+    
+    func didEnd(_ contact: SKPhysicsContact) {
+        
+    }
+    
+}
 
 
 

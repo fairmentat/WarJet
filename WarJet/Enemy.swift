@@ -21,6 +21,13 @@ class Enemy: SKSpriteNode {
         self.yScale = 0.15
         self.zPosition = 20
         self.name = "sprite"
+        
+        // Делаем объект физическим (битовые маски)
+        self.physicsBody = SKPhysicsBody(texture:  texture, alphaThreshold: 0.5, size: self.size)
+        self.physicsBody?.isDynamic = true
+        self.physicsBody?.categoryBitMask = BitMaskCategory.enemy.rawValue
+        self.physicsBody?.collisionBitMask = BitMaskCategory.player.rawValue | BitMaskCategory.shot.rawValue
+        self.physicsBody?.contactTestBitMask = BitMaskCategory.player.rawValue | BitMaskCategory.shot.rawValue
     
         
     }

@@ -6,6 +6,8 @@
 //  Copyright © 2020 BioRobot. All rights reserved.
 //
 
+// Класс для создания дополнительной сцены с кнопкой старта (сцена необходима для предзагрузки атласов)
+
 import SpriteKit
 
 class MenuScene: SKScene {

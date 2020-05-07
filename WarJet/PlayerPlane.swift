@@ -28,9 +28,19 @@ class PlayerPlane: SKSpriteNode {
         let atlas = Assets.shared.warJetImgAtlas
         let playerPlaneTexture = atlas.textureNamed("WarJet_13") //SKTexture(imageNamed: "WarJet_13")
         let playerPlane = PlayerPlane(texture: playerPlaneTexture)
-        playerPlane.setScale(0.2)
+        playerPlane.setScale(0.4)
         playerPlane.position = point
         playerPlane.zPosition = 40
+        // Делаем объект физическим (ощущаемым другими)
+        playerPlane.physicsBody = SKPhysicsBody(texture: playerPlaneTexture, alphaThreshold: 0.5, size: playerPlane.size)
+        playerPlane.physicsBody?.isDynamic = false
+        playerPlane.physicsBody?.categoryBitMask = BitMaskCategory.player.rawValue
+        playerPlane.physicsBody?.collisionBitMask = BitMaskCategory.enemy.rawValue | BitMaskCategory.powerUp.rawValue
+        playerPlane.physicsBody?.contactTestBitMask = BitMaskCategory.enemy.rawValue | BitMaskCategory.powerUp.rawValue
+        
+        
+        
+        
         return playerPlane
     }
     
@@ -159,80 +169,80 @@ class PlayerPlane: SKSpriteNode {
         
     }
     
-//    fileprivate func planeAnimationFillArray() { // Массивы для анимации из атласа
-//
-//        SKTextureAtlas.preloadTextureAtlases([SKTextureAtlas(named: "WarJetImg")]) {
-//
-//            self.lefTextureArrayAnimation = {
-//
-//                var array = [SKTexture]()
-//                for i in stride(from: 13, through: 1, by: -1){
-//
-//                    let number = String(format: "%02d", i)
-//                    let texture = SKTexture(imageNamed: "WarJet_\(number)" )
-//                    array.append(texture)
-//
-//                }
-//
-//                SKTexture.preload(array, withCompletionHandler: {
-//                    print("preload is done")
-//                })
-//                return array
-//
-//            }()
-//
-//            self.rightTextureArrayAnimation = {
-//
-//                var array = [SKTexture]()
-//                for i in stride(from: 13, through: 25, by: 1){
-//
-//                    let number = String(format: "%02d", i)
-//                    let texture = SKTexture(imageNamed: "WarJet_\(number)" )
-//                    array.append(texture)
-//
-//                }
-//
-//                SKTexture.preload(array, withCompletionHandler: {
-//                    print("preload is done")
-//                })
-//                return array
-//
-//            }()
-//
-//            self.forwardTextureArrayAnimation = {
-//
-//                var array = [SKTexture]()
-//                for i in stride(from: 13, to: 13, by: 1){
-//                    let number = String(format: "%02d", i)
-//                    let texture = SKTexture(imageNamed: "WarJet_\(number)" )
-//                    array.append(texture)
-//                }
-//
-//
-//
-//
-//
-//                SKTexture.preload(array, withCompletionHandler: {
-//                    print("preload is done")
-//                })
-//                return array
-//
-//            }()
-//
-//
-//
-//
-//
-//
-//
-//        }
-//
-//
-//
-//
-//
-//
-//    }
+    //    fileprivate func planeAnimationFillArray() { // Массивы для анимации из атласа
+    //
+    //        SKTextureAtlas.preloadTextureAtlases([SKTextureAtlas(named: "WarJetImg")]) {
+    //
+    //            self.lefTextureArrayAnimation = {
+    //
+    //                var array = [SKTexture]()
+    //                for i in stride(from: 13, through: 1, by: -1){
+    //
+    //                    let number = String(format: "%02d", i)
+    //                    let texture = SKTexture(imageNamed: "WarJet_\(number)" )
+    //                    array.append(texture)
+    //
+    //                }
+    //
+    //                SKTexture.preload(array, withCompletionHandler: {
+    //                    print("preload is done")
+    //                })
+    //                return array
+    //
+    //            }()
+    //
+    //            self.rightTextureArrayAnimation = {
+    //
+    //                var array = [SKTexture]()
+    //                for i in stride(from: 13, through: 25, by: 1){
+    //
+    //                    let number = String(format: "%02d", i)
+    //                    let texture = SKTexture(imageNamed: "WarJet_\(number)" )
+    //                    array.append(texture)
+    //
+    //                }
+    //
+    //                SKTexture.preload(array, withCompletionHandler: {
+    //                    print("preload is done")
+    //                })
+    //                return array
+    //
+    //            }()
+    //
+    //            self.forwardTextureArrayAnimation = {
+    //
+    //                var array = [SKTexture]()
+    //                for i in stride(from: 13, to: 13, by: 1){
+    //                    let number = String(format: "%02d", i)
+    //                    let texture = SKTexture(imageNamed: "WarJet_\(number)" )
+    //                    array.append(texture)
+    //                }
+    //
+    //
+    //
+    //
+    //
+    //                SKTexture.preload(array, withCompletionHandler: {
+    //                    print("preload is done")
+    //                })
+    //                return array
+    //
+    //            }()
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //        }
+    //
+    //
+    //
+    //
+    //
+    //
+    //    }
     
     
 }

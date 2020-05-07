@@ -12,6 +12,7 @@ import SpriteKit
 
 class Assets {
     static let shared = Assets()
+    var isLoaded = false
     let bluePowerUpAtlas = SKTextureAtlas(named: "BluePowerUp")
     let enemyKUAtlas = SKTextureAtlas(named: "EnemyKU")
     let flameAtlas = SKTextureAtlas(named: "Flame")

@@ -16,9 +16,9 @@ class Enemy: SKSpriteNode {
     init(enemyTexture:SKTexture) {
         
         let texture = enemyTexture
-        super.init(texture: texture, color: .clear, size: CGSize(width: 529, height: 762))
-        self.xScale = 0.15
-        self.yScale = 0.15
+        super.init(texture: texture, color: .clear, size: CGSize(width: 908, height: 848)) // Внести общий размер для текстур самолёта!!! Иначе они будут несуразные!
+        //self.xScale = 0.15
+        self.setScale(0.10)
         self.zPosition = 20
         self.name = "sprite"
         

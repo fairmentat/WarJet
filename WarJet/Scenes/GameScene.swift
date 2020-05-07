@@ -13,7 +13,13 @@ import GameplayKit
 class GameScene: SKScene  {
     
     
-    var player: PlayerPlane!
+    fileprivate var player: PlayerPlane!
+    fileprivate let hud = HUD()
+    fileprivate let screenSize = UIScreen.main.bounds.size
+    
+    
+    
+    
     
     
     override func didMove(to view: SKView) {
@@ -24,15 +30,18 @@ class GameScene: SKScene  {
         configureStartScene()
         spawnClouds()
         spawnIslands()
-        let deadLine = DispatchTime.now() + .nanoseconds(1)
-        DispatchQueue.main.asyncAfter(deadline: deadLine) { [unowned self] in
-            
-            self.player.performFly()
-        }
+        //        let deadLine = DispatchTime.now() + .nanoseconds(1)
+        //        DispatchQueue.main.asyncAfter(deadline: deadLine) { [unowned self] in
+        
+        self.player.performFly()
+        
         
         spawnPowerUp()
         //spawnEnemy(count: 5)
         spawnEnemies()
+        
+        //configureUI()
+        createHUD()
         
         
         
@@ -40,7 +49,18 @@ class GameScene: SKScene  {
     
     
     
-    
+    fileprivate func createHUD() {
+        
+        addChild(hud)
+        
+        hud.configureUI(screenSize: screenSize)
+        
+        
+        
+        
+        
+        
+    }
     
     
     
@@ -215,9 +235,25 @@ class GameScene: SKScene  {
         
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        playerFire()
+          override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let location = touches.first!.location(in: self)
+        let node = self.atPoint(location)
+        if node.name == "pause" {
+            let transition = SKTransition.doorway(withDuration: 1.0)
+            let pauseScene = PauseScene(size: self.size)
+            pauseScene.scaleMode = .aspectFill
+            self.scene!.view?.presentScene(pauseScene, transition: transition)
+        } else {
+            
+             playerFire()
+            
+            }
+           
+    
+    
+    
     }
+
     
     
     

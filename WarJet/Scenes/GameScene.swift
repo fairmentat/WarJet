@@ -10,9 +10,9 @@ import SpriteKit
 import GameplayKit
 
 
-class GameScene: SKScene  {
+class GameScene: ParrentScene  {
     
-    let sceneManager = SceneManager.shared
+    //let sceneManager = SceneManager.shared
     fileprivate var player: PlayerPlane!
     fileprivate let hud = HUD()
     fileprivate let screenSize = UIScreen.main.bounds.size

@@ -9,9 +9,9 @@
 import SpriteKit
 
 
-class PauseScene: SKScene {
+class PauseScene: ParrentScene {
     
-    let sceneManager = SceneManager.shared
+    //let sceneManager = SceneManager.shared
     
     override func didMove(to view: SKView) {
         
@@ -21,10 +21,11 @@ class PauseScene: SKScene {
         
         
         
-        let header = ButtonNode(titled: "pause", backgroundName: "header_background")
-        header.position = CGPoint(x: self.frame.midX, y: self.frame.midY + 170)
-        //header.setScale(1.6)
-        self.addChild(header)
+//        let header = ButtonNode(titled: "pause", backgroundName: "header_background")
+//        header.position = CGPoint(x: self.frame.midX, y: self.frame.midY + 170)
+//        self.addChild(header)
+        
+        setHeader(withName: "pause", andBackground: "header_background")
         
         
         let titles = ["restart", "options", "resume"]
@@ -50,8 +51,21 @@ class PauseScene: SKScene {
             let gameScene = GameScene(size: self.size)
             gameScene.scaleMode = .aspectFill
             self.scene!.view?.presentScene(gameScene, transition: transition)
-        } else if node.name == "resume" {
+        }
+        else if node.name == "options" {
+            
             let transition = SKTransition.doorsOpenHorizontal(withDuration: 1.0)
+            let optionsScene = OptionsScene(size: self.size)            //guard let gameScene = sceneManager.gameScene else {return}
+            //let gameScene = sceneManager.gameScene
+             optionsScene.backScene = self
+            optionsScene.scaleMode = .aspectFill
+            self.scene!.view?.presentScene(optionsScene, transition: transition)
+            
+            
+        }
+        else if node.name == "resume" {
+            let transition = SKTransition.doorsOpenHorizontal(withDuration: 1.0)
+            //optionsScene.backScene = self
             guard let gameScene = sceneManager.gameScene else {return}
             //let gameScene = sceneManager.gameScene
             gameScene.scaleMode = .aspectFill

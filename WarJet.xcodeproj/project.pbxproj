@@ -25,6 +25,8 @@
 		DC78E8472462BE940067BC3D /* BluePowerUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78E8462462BE940067BC3D /* BluePowerUp.swift */; };
 		DC78E8492462BEA30067BC3D /* GreenPowerUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78E8482462BEA30067BC3D /* GreenPowerUp.swift */; };
 		DC7A533024655B7D00FA0385 /* SceneManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7A532F24655B7D00FA0385 /* SceneManager.swift */; };
+		DC7A533224658E2C00FA0385 /* ParrentScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7A533124658E2C00FA0385 /* ParrentScene.swift */; };
+		DC7A53342465949900FA0385 /* OptionsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7A53332465949900FA0385 /* OptionsScene.swift */; };
 		DC8C6A4D24646D7500890C52 /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8C6A4C24646D7500890C52 /* HUD.swift */; };
 		DC945C7E246497DE000CADCC /* ButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC945C7D246497DE000CADCC /* ButtonNode.swift */; };
 		DC9873B8245B3CC100748D74 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9873B7245B3CC100748D74 /* Background.swift */; };
@@ -60,6 +62,8 @@
 		DC78E8462462BE940067BC3D /* BluePowerUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluePowerUp.swift; sourceTree = "<group>"; };
 		DC78E8482462BEA30067BC3D /* GreenPowerUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenPowerUp.swift; sourceTree = "<group>"; };
 		DC7A532F24655B7D00FA0385 /* SceneManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneManager.swift; sourceTree = "<group>"; };
+		DC7A533124658E2C00FA0385 /* ParrentScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParrentScene.swift; sourceTree = "<group>"; };
+		DC7A53332465949900FA0385 /* OptionsScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsScene.swift; sourceTree = "<group>"; };
 		DC8C6A4C24646D7500890C52 /* HUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUD.swift; sourceTree = "<group>"; };
 		DC945C7D246497DE000CADCC /* ButtonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonNode.swift; sourceTree = "<group>"; };
 		DC9873B7245B3CC100748D74 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
@@ -191,6 +195,8 @@
 				DC1F3C01245AEB1A00E993F2 /* GameScene.swift */,
 				DCC8C986246301CF000707DF /* MenuScene.swift */,
 				DC9D908E2464A3630092F160 /* PauseScene.swift */,
+				DC7A53332465949900FA0385 /* OptionsScene.swift */,
+				DC7A533124658E2C00FA0385 /* ParrentScene.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -287,12 +293,14 @@
 				DC78E8492462BEA30067BC3D /* GreenPowerUp.swift in Sources */,
 				DC9873B8245B3CC100748D74 /* Background.swift in Sources */,
 				DCC8C98924630919000707DF /* BitMaskCategory.swift in Sources */,
+				DC7A533224658E2C00FA0385 /* ParrentScene.swift in Sources */,
 				DCC8C987246301CF000707DF /* MenuScene.swift in Sources */,
 				DC9D908F2464A3630092F160 /* PauseScene.swift in Sources */,
 				DC8C6A4D24646D7500890C52 /* HUD.swift in Sources */,
 				DCA2928624609D9600207116 /* PowerUp.swift in Sources */,
 				DC9873BA245B419700748D74 /* Island.swift in Sources */,
 				DC945C7E246497DE000CADCC /* ButtonNode.swift in Sources */,
+				DC7A53342465949900FA0385 /* OptionsScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

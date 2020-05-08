@@ -12,7 +12,7 @@ import GameplayKit
 
 class GameScene: SKScene  {
     
-    
+    let sceneManager = SceneManager.shared
     fileprivate var player: PlayerPlane!
     fileprivate let hud = HUD()
     fileprivate let screenSize = UIScreen.main.bounds.size
@@ -23,6 +23,11 @@ class GameScene: SKScene  {
     
     
     override func didMove(to view: SKView) {
+        
+        // Проверяем существование сцены
+        guard sceneManager.gameScene == nil else {return}
+        
+        sceneManager.gameScene = self
         
         physicsWorld.contactDelegate = self  // Протокол предоставляющий метод для регистрации столкновений
         physicsWorld.gravity = CGVector.zero // Сила гравитации равна нулю
@@ -239,7 +244,7 @@ class GameScene: SKScene  {
         let location = touches.first!.location(in: self)
         let node = self.atPoint(location)
         if node.name == "pause" {
-            let transition = SKTransition.doorway(withDuration: 1.0)
+            let transition = SKTransition.doorsOpenHorizontal(withDuration: 1.0)
             let pauseScene = PauseScene(size: self.size)
             pauseScene.scaleMode = .aspectFill
             self.scene!.view?.presentScene(pauseScene, transition: transition)

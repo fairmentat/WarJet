@@ -33,7 +33,7 @@ class Shot: SKSpriteNode {
         self.setScale(0.3)
         self.name = "shotSprite"
         self.zPosition = 30
-        
+        // Делаем объект физическим
         self.physicsBody = SKPhysicsBody(texture:  texture, alphaThreshold: 0.5, size: self.size)
               self.physicsBody?.isDynamic = false
         self.physicsBody?.categoryBitMask = BitMaskCategory.shot.rawValue

@@ -22,7 +22,7 @@ class MenuScene: ParrentScene {
             
         }
         
-        self.backgroundColor = SKColor(red: 0.15, green: 0.15, blue: 0.3, alpha: 1.0)
+       // self.backgroundColor = SKColor(red: 0.15, green: 0.15, blue: 0.3, alpha: 1.0)
         
         setHeader(withName: nil, andBackground: "header1")
         
@@ -71,13 +71,13 @@ class MenuScene: ParrentScene {
             self.scene!.view?.presentScene(optionScenes, transition: transition)
             
             
-        } else if node.name == "options" {
+        } else if node.name == "best" {
             
-//            let transition = SKTransition.doorsOpenHorizontal(withDuration: 1.0)
-//            let optionsScene = OptionsScene(size: self.size)            
-//             optionsScene.backScene = self
-//            optionsScene.scaleMode = .aspectFill
-//            self.scene!.view?.presentScene(optionsScene, transition: transition)
+            let transition = SKTransition.doorsOpenHorizontal(withDuration: 1.0)
+            let bestScene = BestScene(size: self.size)
+             bestScene.backScene = self
+            bestScene.scaleMode = .aspectFill
+            self.scene!.view?.presentScene(bestScene, transition: transition)
             
             
         }

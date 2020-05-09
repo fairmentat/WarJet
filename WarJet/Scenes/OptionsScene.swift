@@ -14,7 +14,7 @@ class OptionsScene: ParrentScene {
         
         
         
-        self.backgroundColor = SKColor(red: 0.15, green: 0.15, blue: 0.3, alpha: 1.0)
+        //self.backgroundColor = SKColor(red: 0.15, green: 0.15, blue: 0.3, alpha: 1.0)
         
         
         
